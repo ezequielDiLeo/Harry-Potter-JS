@@ -1,0 +1,1214 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+@import url('https://fonts.cdnfonts.com/css/harry-potter');
+@import url('https://fonts.cdnfonts.com/css/harrypotter7');
+
+$color1:black;
+
+@mixin display{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+$--facebook: rgb(22, 22, 223);
+$--instagram: rgb(209, 31, 43);
+$--whatsapp: rgb(9, 214, 9);
+/*font-family: 'Harry Potter', sans-serif;*/
+/*font-family: 'Cinzel', serif;*/
+/*font-family: 'HarryPotter7', sans-serif;*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: auto;
+    scroll-behavior: smooth;
+    font-family: 'Cinzel', serif;
+}
+body::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #010113;
+    border-radius: 50px;
+}
+body::-webkit-scrollbar-thumb:hover{
+    background-color: #9d8531;
+}
+
+
+/*index*/
+
+.harry{
+    @include display;
+    width: 100%;
+    height: 70px;
+    background-color: #000000;
+    color: aliceblue;
+    padding-top: 20px;
+}
+.harryP{
+    height: 80px;
+    cursor: pointer;
+    display: flex;
+}
+
+header{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(rgb(0, 0, 0), rgba(34, 34, 36, 0));
+    padding: 10px;
+    z-index: 1;
+
+    .fotoLogo{
+        height: 80px;
+        cursor: pointer;
+        display: flex;
+    }
+
+    nav{
+        text-decoration: none;
+        list-style: none;
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+
+            a{
+                font-size: 17px;
+                color: rgb(255, 255, 255);
+                padding: 12px 20px;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+ul li{
+    list-style: none;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.infoHp{
+    @include display;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    color: rgb(18, 17, 17);
+    background: linear-gradient(rgba(43, 43, 46, 0.66), rgba(32, 32, 33, 0.478)), url(../images/fondoHp.jpg) no-repeat center center fixed;
+    background-size: cover;
+    object-fit: cover;
+
+    img{
+        margin: 0 50px 0 0;
+        padding-bottom: 100px;
+        padding-left: 20px;
+    }
+
+    
+
+    .HP{
+        margin: 20px;
+        color: rgb(183, 183, 60);
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.872);
+        @include display;
+        font-size: 30px;
+    }
+    .subHp{
+        text-transform: capitalize;
+        color: #fffbfb;
+        @include display;
+        padding: 20px;
+        font-family: 'HarryPotter7', sans-serif;
+        font-size: 15px;
+    }
+    
+}
+
+@media only screen and (max-width:595px) {
+    .infoHp{
+        img{
+            width: 350px;
+            padding-left: 40px;
+        }
+    }
+}
+
+/*info casas HP*/
+
+.title{
+    @include display;
+    flex-direction: column;
+    width: 100%;
+    background: linear-gradient( rgba(24, 14, 1, 0.955), rgb(1, 0, 15));
+
+    .tituloCasas{
+        text-align: center;
+        padding-top: 20px;
+        color: #ede3e3;
+        text-shadow: 0 0 5px black;
+        text-transform: capitalize;
+    }
+    .hr{
+        width: 60%;
+        border: 1.5px solid rgb(173, 156, 156);
+        background-color: #000000;
+        margin-top: 10px;
+    }
+}
+
+.contenedor_casas{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    scrollbar-width: none;
+    .contenedor_info{
+        background-color: rgb(3, 5, 16);
+        width: 100%;
+        height: auto;
+        display: flex;
+        overflow: hidden;
+        text-align: justify;
+        padding: 40px 10px 40px 10px;
+        padding-right: 40px;
+    
+        .contenedor_img{
+            width: 50%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            animation: transladar 3s ease;
+            img{
+                width: 700px;
+                height: 400px;
+            }
+            .imgSly{
+                width: 690px;
+                padding-top: 30px;
+            }
+            .imgRav{
+                width: 690px;
+                padding-top: 30px;
+            }
+        }
+        @keyframes transladar {
+            0%{
+                transform: translateX(-90%);
+            }
+            80%{
+                transform: translateX(5%);
+            }
+            100%{
+                transform: translateX(0%);
+            }
+        }
+    
+        
+        .contenedor_p{
+            width: 60%;
+            height: 400px;
+            overflow:scroll;
+            color: rgb(211, 208, 208);
+            margin: 0 50px 0 50px;
+            padding: 20px 10px 20px 10px;
+            border-bottom: 5px solid rgb(145, 145, 21);
+            text-align: justify;
+            align-items: center;
+            .gry{
+                text-shadow: 0 0 5px red;
+                padding-top: 20px;
+                text-align: center;
+                width: 100%;
+            }
+            .sly{
+                text-shadow: 0 0 5px rgb(11, 163, 29);
+                padding-top: 20px;
+                text-align: center;
+            }
+            .huf{
+                text-shadow: 0 0 5px rgb(204, 188, 4);
+                padding-top: 20px;
+                text-align: center;
+            }
+            .rav{
+                text-shadow: 0 0 5px rgb(0, 110, 255);
+                padding-top: 20px;
+                text-align: center;
+            }
+            p{
+                padding: 20px 20px 20px 20px;
+                text-align: justify;
+            }
+            hr{
+                margin: 0 10px 20px 10px;
+            }
+            
+        }
+    }
+    
+    
+    
+    .izq{
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: start;
+        width: 100%;
+        background-color: rgb(3, 5, 16);
+        hr{
+            width: 60%;
+            color: #ffffff;
+        }
+    }
+    .der{
+        display: flex;
+        align-items: end;
+        flex-direction: column;
+        justify-content: end;
+        width: 100%;
+        background-color: rgb(3, 5, 16);
+        hr{
+            width: 60%;
+            color: #ffffff;
+        }
+    }
+}
+
+.contenedor_casas::-webkit-scrollbar{
+    width: 0;
+}
+
+@media only screen and (min-width:1250px){
+    .contenedor_casas{
+        .contenedor_info{
+            .contenedor_img{
+                img{
+                    width: 680px;
+                }
+            }
+            .contenedor_p{
+                margin-right: 50px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1250px) {
+    .contenedor_casas{
+        .contenedor_info{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            .contenedor_img{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                img{
+                    width: 680px;
+                }
+                .contenedor_p{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:380px){
+    .contenedor_casas{
+        .contenedor_info{
+            .contenedor_img{
+                img{
+                    width: 400px;
+                    height: auto;
+                }
+            }
+            .contenedor_p{
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+
+/*css autora*/
+
+.presentacion{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(../images/cieloEstrellado.jpg) no-repeat center center;
+
+    .nombre{
+        color: #fffbfb;
+        font-size: 45px;
+        padding-top: 120px;
+        padding-bottom: 50px;
+    }
+    
+    .sub{
+        color: #fffbfb;
+        font-size: 20px;
+        font-family: 'Harry Potter', sans-serif;
+    }
+}
+
+.subTitle{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: rgb(3, 5, 16);
+    color: rgb(211, 208, 208);
+    margin: 0;
+}
+
+/*BIOGRAFIA*/
+
+.contenedor_A{
+    background-color: rgb(3, 5, 16);
+    width: 100%;
+    height: 500px;
+    display: flex;
+    overflow: hidden;
+    text-align: justify;
+    padding: 40px 10px 40px 10px;
+    padding-right: 40px;
+
+    .contenedor_img_A{
+        width: 50%;
+        height: 400px;
+        background-size: cover;
+        background-position: center;
+        img{
+            width: 700px;
+            height: 400px;
+        }
+    }
+
+    
+    .contenedor_B{
+        width: 50%;
+        height: 400px;
+        overflow:scroll;
+        color: rgb(211, 208, 208);
+        margin: 0 50px 0 50px;
+        padding: 20px 10px 20px 10px;
+        border-bottom: 5px solid rgb(145, 145, 21);
+        text-align: justify;
+        align-items: center;
+        .Bio{
+            text-shadow: 0 0 5px rgb(253, 249, 0);
+            padding-top: 20px;
+            text-align: center;
+        }
+        p{
+            padding: 20px 20px 20px 20px;
+            text-align: justify;
+        }
+    }
+}
+
+@media only screen and (max-width:1250px) {
+    .contenedor_A{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .contenedor_img_A{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .contenedor_B{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width:900px){
+    .contenedor_A{
+        .contenedor_img_A{
+            img{
+                width: 500px;
+            }
+        }
+
+        .contenedor_B{
+            width: 100%;
+            height: 400px;
+            overflow:scroll;
+            color: rgb(211, 208, 208);
+            border-bottom: 5px solid rgb(145, 145, 21);
+            text-align: justify;
+            align-items: center;
+            margin-top: 10px;
+            .Bio{
+                text-shadow: 0 0 5px rgb(253, 249, 0);
+                padding: 20px;
+                text-align: center;
+            }
+            p{
+                padding: 20px 20px 20px 20px;
+                text-align: justify;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:700px){
+    .contenedor_A{
+        .contenedor_img_A{
+            img{
+                width: 300px;
+                height: 200px;
+            }
+        }
+    }
+}
+
+
+
+/*css peliculas*/
+
+.infoPeliculas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 605px;
+    background: #000000;
+    background: url(../images/fondoPelis.jpg);
+    background-position: center;
+    background-size: cover;
+
+    .vinculoPeli{
+        text-decoration: none
+    }
+
+    .fondoPrinc{
+        margin-top: 200px;
+        width: 850px;
+
+        .h2{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            text-shadow: 0 0 5px rgb(21, 212, 226);
+            text-transform: uppercase;
+            padding: 20px 20px 0 20px;
+            position: relative;
+            width: 100%;
+            color: rgb(255, 255, 255);
+
+            text-decoration: none;
+        }
+
+        .intro{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            color: #fffbfb;
+            background-color: #000000a1;
+            padding: 30px;
+        }
+    }
+    @media only screen and (max-width:850px){
+        .fondoPrinc{
+            width: auto;
+        }
+    }
+}
+
+
+
+/*informacion de las peliculas*/
+
+.saga{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(8, 86, 125), rgb(0, 0, 0));
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: rgb(248, 245, 245);
+    
+    .sagaHP{
+        text-shadow: 0 0 6px rgb(47, 99, 117);
+    }
+    .SubHp{
+        color: rgb(63, 117, 184);
+    }
+}
+
+
+
+
+.infoFilms {
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    .gif1{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0 20px 0;
+        img{
+            height: 150px;
+        }
+    }
+    
+    .movies-section {
+        width: 100%;
+        overflow-x: scroll;
+        background-color: rgba(0, 0, 0, 0.683);
+    }
+    
+    .movies-container {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .movie {
+        flex: 0 0 auto;
+        width: 200px;
+        height: 300px;
+        margin-right: 20px;
+    }
+    
+    .movie img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 1s ease;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .movie img:hover{
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+}
+
+/*css libros*/
+
+.tituloLibro{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(12, 0, 68), rgb(0, 0, 0));
+    color: #ede3e3;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.infoLibros{
+    width: 100%;
+    height: 570px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background-color: $color1;
+    background-image: url(../images/fondolibros.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    .fondoLibros{
+        width: 60%;
+        margin-top: 250px;
+        .bookInfo{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            text-transform: uppercase;
+            color: rgb(157, 157, 47);
+            text-shadow: 5px 5px 5px rgba(92, 92, 6, 0.497);
+            padding: 20px 20px 0 20px;
+            font-size: 25px;
+        }
+        
+        .textoLibros{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 15px;
+            padding: 20px;
+        }
+    }
+}
+
+/*parte libros*/
+.contenedor_galeria{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: $color1;
+    text-align: center;
+    .imagenesL{
+        width: 100%;
+        height: auto;
+        background-color: rgb(0, 0, 0);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 500px);
+        grid-gap: 40px;
+        .img{
+            border: 3px solid rgb(51, 50, 10);
+            background-position: center;
+            object-fit: cover;
+            width: 70%;
+            height: 300px;
+            margin-top: 15px;
+        }
+        h2{
+            font-size: 15px;
+            color: rgb(255, 255, 255);
+            padding: 10px 20px 10px 20px;
+        }
+        .contenedor_img{
+            box-shadow: 5px 5px 20px rgba(67, 63, 8, 0.554);
+            background-color: rgb(7, 7, 7);
+            border-radius: 8px;
+            .precio{
+                font-size: 12px;
+                color: #ffffff;
+                text-decoration: underline rgb(138, 138, 34);
+            }
+            .btn{
+                font-size: 17px;
+                color: rgb(0, 0, 0);
+                background-color: rgb(138, 138, 34);
+                text-decoration: none;
+            }
+        }
+        .contenedor_img:hover{
+        box-shadow: 5px 5px 20px $color1;
+        transform: translateY(-2%);
+        }
+
+        .img1{
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        
+        .img2{
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+        
+        .img3{
+            grid-column: 3/4;
+            grid-row: 1/2;
+        }
+        
+        .img4{
+            grid-column: 4/5;
+            grid-row: 1/2;
+        }
+        .img5{
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        .img6{
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+        .img7{
+            grid-column: 3/4;
+            grid-row: 2/3;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .contenedor_galeria{
+        .imagenesL{
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 500px);
+
+            .img1{
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+            
+            .img2{
+                grid-column: 2/3;
+                grid-row: 1/2;
+            }
+            
+            .img3{
+                grid-column: 3/4;
+                grid-row: 1/2;
+            }
+            
+            .img4{
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+            .img5{
+                grid-column: 2/3;
+                grid-row: 2/3;
+            }
+            .img6{
+                grid-column: 3/4;
+                grid-row: 2/3;
+            }
+            .img7{
+                grid-column: 1/2;
+                grid-row: 3/4;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .contenedor_galeria{
+        .imagenesL{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 500px);
+            .img{
+                width: 250px;
+            }
+
+            .img1{
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+            
+            .img2{
+                grid-column: 2/3;
+                grid-row: 1/2;
+            }
+            
+            .img3{
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+            
+            .img4{
+                grid-column: 2/3;
+                grid-row: 2/3;
+            }
+            .img5{
+                grid-column: 1/2;
+                grid-row: 3/4;
+            }
+            .img6{
+                grid-column: 2/3;
+                grid-row: 3/4;
+            }
+            .img7{
+                grid-column: 1/2;
+                grid-row: 4/5;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contenedor_galeria{
+        .imagenesL{
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(7, 500px);
+            .img{
+                width: 200px;
+            }
+
+            .img1{
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+            
+            .img2{
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+            
+            .img3{
+                grid-column: 1/2;
+                grid-row: 3/4;
+            }
+            
+            .img4{
+                grid-column: 1/2;
+                grid-row: 4/5;
+            }
+            .img5{
+                grid-column: 1/2;
+                grid-row: 5/6;
+            }
+            .img6{
+                grid-column: 1/2;
+                grid-row: 6/7;
+            }
+            .img7{
+                grid-column: 1/2;
+                grid-row: 7/8;
+            }
+        }
+    }
+}
+
+/* media parte fondo */
+@media screen and (max-width: 900px){
+    .infoLibros{
+        background-color: $color1;
+        .fondoLibros{
+            .bookInfo{
+                font-size: 20px;
+            }
+            .textoLibros{
+                font-size: 10px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 330px){
+    .infoLibros{
+        background-color: #000000;
+        .fondoLibros{
+            .bookInfo{
+                font-size: 15px;
+            }
+            .textoLibros{
+                font-size: 10px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+
+/*css plataforma 9 3/4*/
+
+
+.infoPlataforma{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.672), rgba(6, 6, 6, 0.433)), url(../images/fondoEstacion.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #fffbfb;
+
+    .plataformImg{
+        width: 100%;
+        height: 200px;
+        align-items: center;
+    }
+}
+
+.tituloPlat{
+    font-size: 30px;
+    padding: 30px;
+    color: rgb(185, 160, 18);
+    margin: 0;
+    text-align: center;
+    background: linear-gradient(rgb(3, 0, 16), rgb(0, 0, 0));
+}
+
+
+.plataforma{
+    width: 100%;
+    .platform {
+        background-color: #020202;
+        height: auto;
+        padding: 20px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        color: #ffffff;
+    }
+    
+    .imgP {
+        display: block;
+        margin: auto;
+        width: 700px;
+        height: 300px;
+        margin-bottom: 0px;
+        object-fit: cover;
+        background-position: center;
+    }
+    
+    .infoPlat {
+        font-size: 15px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        .separacion{
+            margin-bottom: 20px;
+        }
+    }
+    
+    .platform a {
+        display: inline-block;
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        background-color: rgb(178, 155, 22);
+        color: #000;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    
+    .platform a:hover {
+        background-color: #c0c0c0;
+    }
+
+    .ubi{
+        text-align: left;
+        padding-top: 20px;
+        span{
+            font-size: 20px;
+            color: gold;
+            padding-bottom: 10px;
+            padding-left: 30px;
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .plataforma{
+        .imgP{
+            width: 300px;
+        }
+    }
+}
+
+
+/*informacion acceso*/
+.acceso{
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgb(0,0,0), rgb(4, 0, 16));
+    margin: 0;
+    .contenedorAcceso{
+        width: auto;
+        height: auto;
+        padding-top: 100px;
+        .imgTren{
+            width: 700px;
+        }
+    }
+    .contenedortxtA{
+        color: #ede3e3;
+        padding: 30;
+        margin: 0;
+        text-align: center;
+        .tituloTren{
+            padding: 30px;
+            text-align: center;
+            color: rgb(163, 139, 5);
+        }
+        .tren{
+            text-align: justify;
+            padding: 30px;
+            span{
+                color: goldenrod;
+                font-size: 40px;
+            }
+        }
+        a{
+            display: inline-block;
+            font-size: 15px;
+            padding: 10px 20px;
+            background-color: rgb(64, 10, 10);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width:900px){
+    .acceso{
+        .contenedorAcceso{
+            width: auto;
+            height: auto;
+            padding-top: 100px;
+            .imgTren{
+                width: 600px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:700px){
+    .acceso{
+        .contenedorAcceso{
+            width: auto;
+            height: auto;
+            padding-top: 100px;
+            .imgTren{
+                width: 500px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:507px){
+    .acceso{
+        .contenedorAcceso{
+            width: auto;
+            height: auto;
+            padding-top: 100px;
+            .imgTren{
+                width: 300px;
+            }
+        }
+    }
+}
+@media only screen and (max-width:290px){
+    .acceso{
+        .contenedorAcceso{
+            width: auto;
+            height: auto;
+            padding-top: 100px;
+            .imgTren{
+                width: 200px;
+            }
+        }
+    }
+}
+
+/*footer*/
+
+.links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    background-color: rgba(6, 6, 6, 0.935);
+    h2{
+        font-size: 25px;
+    }
+
+    hr{
+        width: 70%;
+        border: 1.5px solid;
+        margin-bottom: 20px;
+    }
+
+    a{
+        color: rgb(229, 233, 237);
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+}
+
+#contact-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+
+    ul li{
+        display: inline-block;
+        margin: 0 2px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+    }
+    a{
+        display: block;
+        padding: 0;
+        background-color: rgba(66, 63, 63, 0.338);
+        color: #fffbfb;
+        line-height: 50px;
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 40px;
+    }
+}
+
+#contact-link ul:hover a{
+    filter: blur(2px);
+}
+
+#contact-link ul li a:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+    filter: none;
+}
+
+#contact-link ul li .facebook:hover{
+    background-color: $--facebook;
+}
+
+#contact-link ul li .instagram:hover{
+    background-color: $--instagram;
+}
+
+#contact-link ul li .whatsapp:hover{
+    background-color: $--whatsapp;
+}
+
+@media only screen and (max-width:900px){
+    .links{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 150px;
+        background-color: rgba(6, 6, 6, 0.935);
+        h2{
+            font-size: 13px;
+        }
+    }
+}
