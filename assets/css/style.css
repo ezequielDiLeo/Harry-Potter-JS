@@ -160,7 +160,7 @@ ul li {
 .contenedor_casas {
   width: 100%;
   height: auto;
-  overflow: hidden;
+  overflow: auto;
   scrollbar-width: none;
 }
 .contenedor_casas .contenedor_info {
@@ -168,7 +168,7 @@ ul li {
   width: 100%;
   height: auto;
   display: flex;
-  overflow: hidden;
+  overflow: auto;
   text-align: justify;
   padding: 40px 10px 40px 10px;
   padding-right: 40px;
@@ -206,7 +206,8 @@ ul li {
 .contenedor_casas .contenedor_info .contenedor_p {
   width: 60%;
   height: 400px;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
   color: rgb(211, 208, 208);
   margin: 0 50px 0 50px;
   padding: 20px 10px 20px 10px;
@@ -996,6 +997,48 @@ ul li {
     width: 200px;
   }
 }
+/*info boletos*/
+.formBoletos {
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.708), rgba(0, 0, 0, 0.65)), url(../images/boleto.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+.formBoletos .bol {
+  font-weight: 700;
+  font-size: 25px;
+}
+.formBoletos .nombre {
+  background-color: #010113;
+  color: #ffffff;
+  margin: 10px;
+  text-align: center;
+}
+.formBoletos .btn {
+  background-color: #a19536;
+  color: rgb(0, 0, 0);
+  border: 2px solid #fff;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+.formBoletos .infoBoleto {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  font-size: 20px;
+  text-decoration: underline;
+}
+.formBoletos .infoB {
+  margin: 15px;
+  font-size: 13px;
+}
+
 /*footer*/
 .links {
   display: flex;
