@@ -3,12 +3,14 @@
 /*.splice= elimina desde el indice que decimos la cantidad que le decimos... por ej =
 let usuarios = ["juan", "roman", "diego", "miguel", "eze"]
 usuarios.splice(0, 2) 
-console.log(usuarios);*/
-// .join(, ) (agrega el caractér que pongas entre parentesis)
+console.log(usuarios);*/ //elimina = juan-roman-diego y queda = miguel,eze
+// .join(, ) (agrega el caractér que pongas entre parentesis, en este caso la coma)
 //concat, concatena arrays
 /*.slice, toma los parametros desde el que le pasas al utlimo que le pasas parecido al splice, sirve para guardarlo en otro const*/
 //.indexof("elemnto") y devuelve el indice del elemento que le pido
 //.includes("elemento") devuelve un booleano si esta o no el elemnt
+// para recorrer un array usar for of.
+
 
 //lista de usuarios
 
@@ -17,10 +19,6 @@ let nombreUsuario = prompt("ingrese su nombre: ")
 usuarios.push(nombreUsuario)
 console.log(usuarios);
 
-
-
-
-//do.. while
 
 let cantidadDisp = 50;
 let vendidos = 0;
