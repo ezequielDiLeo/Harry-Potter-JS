@@ -80,6 +80,11 @@ for (const book of books){
 //array.filter= busca entre los objetos los valores que coincidan
 //array.some retorna lo mismo que el filter pero con true o false
 //array.map= retorna el atributo que le pedis. por ej= const hola = array.map((el) => el.nombre) = los nombres del array
+/*array.reduce =
+//const total = numeros.reduce((acumulador, elemento) => acumulador + elemento, 0) ->el 0 es de donde inicia
+acumulador = una variable que almacena los elemtnos
+elemento = recorre los elementos del array
+*/
 
 const precio = books.filter((el)=> el.precio > 2000)
 console.log(precio)
