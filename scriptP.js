@@ -1,5 +1,3 @@
-//preguntar mago o muggle
-//function... var.. if... prompt...
 
 function muggle(nombre){
 
@@ -15,52 +13,51 @@ function muggle(nombre){
 }
 muggle(prompt("escribe tu nombre"))
 
-//ingresar tipo
-//switch
+setTimeout(()=>{
+    console.log("muy bien")
+    alert("debes completar el campo obligatoriamente")
+}, 500)
 
-/* num = parseInt(prompt("ingrese... \n 1 para: muggle \n 2 para: mago \n 3 para: sangre sucia"));
-let tipo;
+/*console.log(Math.PI) //3.14159265... = devuelve el PI 
+console.log(Math.E) //2.7182818284... = constante de Euleur
 
-switch(num){
-    case 1:
-        tipo = "muggle";
-        break;
-    case 2: 
-        tipo = "mago";
-        break;
-    case 3:
-        tipo = "sangre sucia"
-        break;
-    default:
-        tipo = "no existe"
-        break;
-} */
+//Math.max(55, 13, 0, -20) // 55 = retorna el maximo
+//Math.min(55, 13, 0, -20) // -20 = retorna el minimo
 
-console.log("tu tipo es " + tipo)
+//Math.ceil = devuelve el entero mayor o igual mas proximo
+por ejemplo de PI = 4
+/console.log(Math.ceil(PI)) // 4
 
-//for..  libros
-/* 
-let librosHP = [
-    {titulo: "Harry potter y la piedra filosofal", autor:"JKRowling"},
-    {titulo: "Harry potter y la cámara secreta", autor:"JKRowling"},
-    {titulo: "Harry potter y el prisionero de Azkaban", autor:"JKRowling"},
-    {titulo: "Harry potter y el cáliz de fuego", autor:"JKRowling"},
-    {titulo: "Harry potter y la Orden del Fénix", autor:"JKRowling"},
-    {titulo: "Harry potter y el misterio del príncipe", autor:"JKRowling"},
-    {titulo: "Harry potter y las reliquias de la muerte", autor:"JKRowling"}
-]
+//Math.floor = devuelve el entero mas cercando reodndeado hacia abajo
+por ejemplo de PI = 3
 
-for(let i = 0; i < librosHP.length; i++){
-    console.log("libro " + (i + 1));
-    console.log(librosHP[i].titulo + ", AUTORA: " + librosHP[i].autor)
-} */
+//Math.round = devuelve un numero redondeado al entero mas cercano
+por ejemplo de PI = 3
 
-//while me quede sin ideas xd
-/* 
-let peliculas = 0;
 
-while (peliculas <= 7) {
-    console.log("Harry Potter " + peliculas);
-    peliculas++;
-} */
+//Math.sqrt = retorna la raiz cuadrada de un numero 
+/ Math.sqrt(9) = 3
+
+//Math.random() = genera un numero aleatorio entre 0 y 1, siendo 0 como limite inclusivo y 1 exclusivo
+/podemos multipicarlo por x numero para que me de numero mayores de 0 a 1
+/console.log(Math.random() * 10)
+o
+/const generadorNumero = () => {
+    return Math.round( Math.random() * 100 )
+}
+
+//console.log ( new Date() ) retorna la fecha y horario GTM
+puedo darle parametros 
+/const casiNavidad = new Date ("December 25, 2021, 23:59:59")
+
+
+const hoy = new Date("december 17, 2021")
+/console.log(hoy.toDateString() ) // fri dec 2021
+/console.log(hoy.toLocaleString() ) // 17/12/2021 00:00:00
+/console.log(hoy.toLocalDateString() ) // 17/12/2021
+/console.log(hoy.toTimeString() ) // 00:00:00 GMT-0300
+
+*/
+
+
 

@@ -10,6 +10,7 @@
 
 
     //this exclusivamente para el valor de la constante
+    //clase constructora con metodos para agregar o sacar del carrito.
 class Carrito{
 
     constructor (nombre, editorial, año, stock){
@@ -76,6 +77,10 @@ for (const book of books){
     console.log(book.precio)
 }
 
+const totalLibros = books.reduce((acumulador, el) => acumulador + el.precio, 0)
+
+console.log(totalLibros)
+
 //array.find= busca entre los objetos el primer valor
 //array.filter= busca entre los objetos los valores que coincidan
 //array.some retorna lo mismo que el filter pero con true o false
@@ -85,6 +90,12 @@ for (const book of books){
 acumulador = una variable que almacena los elemtnos
 elemento = recorre los elementos del array
 */
+//array.sort= ordena de menor a mayor o viceversa en caso de numeros
+//
+
+
 
 const precio = books.filter((el)=> el.precio > 2000)
 console.log(precio)
+
+
