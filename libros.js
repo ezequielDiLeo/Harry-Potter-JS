@@ -1,16 +1,4 @@
 
-    /*un método = this.hablar = ()=>{console.log("hola soy "+this.nombre)}, envia undefined si no retorna algo
-
-    o.....................................................
-
-    hablar() {
-        console.log("algo")
-    }
-    */
-
-
-    //this exclusivamente para el valor de la constante
-    //clase constructora con metodos para agregar o sacar del carrito.
 class Carrito{
 
     constructor (nombre, editorial, año, stock){
@@ -81,21 +69,61 @@ const totalLibros = books.reduce((acumulador, el) => acumulador + el.precio, 0)
 
 console.log(totalLibros)
 
-//array.find= busca entre los objetos el primer valor
-//array.filter= busca entre los objetos los valores que coincidan
-//array.some retorna lo mismo que el filter pero con true o false
-//array.map= retorna el atributo que le pedis. por ej= const hola = array.map((el) => el.nombre) = los nombres del array
-/*array.reduce =
-//const total = numeros.reduce((acumulador, elemento) => acumulador + elemento, 0) ->el 0 es de donde inicia
-acumulador = una variable que almacena los elemtnos
-elemento = recorre los elementos del array
-*/
-//array.sort= ordena de menor a mayor o viceversa en caso de numeros
-//
-
-
 
 const precio = books.filter((el)=> el.precio > 2000)
 console.log(precio)
 
 
+
+const promesa =  (res) =>{
+    return new Promise((resolve, reject) =>{
+        setTimeout( () => {
+            res ? resolve("promesa resuelta") : reject("rechazada")
+        }, 2000)
+    })
+}
+
+
+console.log (promesa (true))
+
+/* const promesa2 =  (res) =>{
+    return new Promise((resolve, reject) =>{
+        if(res === true){
+            resolve("resuelto")
+        }else{
+            reject("rechazada")
+        }
+    })
+}
+
+carritoConAlgo(true)
+    .then( (response)=>{
+        console-log(response)
+    })
+
+carritoConAlgo(false)
+    .catch((error) =>{
+        console.log(error)
+    }) */
+
+
+    /*
+    fetch('data.json')
+    .then( (res) => res.json())
+    .then((data))=>{
+        data.forEach((producto) => {
+            const li = document.createElement('li')
+
+        })
+    } )
+
+    */
+
+let btn = document.querySelectorAll(".btn");
+console.log(btn.length);
+
+let div = document.getElementsByClassName("contenedor_img")[0];
+console.log(div.innerText)
+
+let Libro = document.querySelector(".Libro")
+Libro.innerHTML = "libros Harry Potter"
