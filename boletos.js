@@ -1,5 +1,4 @@
 
-//lista de usuarios
 
 let usuarios = []
 let nombreUsuario = prompt("ingrese su nombre: ")
@@ -43,4 +42,36 @@ do{
 console.log(cantidadDisp)
 
 let nombre = document.getElementById("nombre")
-console.log(nombre.innerHTML)
+console.log(nombre.innerHTML) 
+
+let productoObjeto = [
+    {
+        id : 1,
+        nombre : "nombreUsuario",
+    },
+    {
+        id : 2,
+        nombre : "mail"
+    },
+    {
+        id : 3,
+        nombre : "cant boletos"
+    }
+]
+
+let contenedorStock = document.getElementById("stock")
+console.log(contenedorStock);
+
+function mostrarElementos(){
+
+for (const producto of productoObjeto) {
+
+    let contenedor = document.createElement("div");
+    contenedor.innerHTML =     
+                            `<h3> ID: ${producto.id} </h3>
+                            <p>producto: ${producto.nombre}</p>`
+                        
+    contenedorStock.appendChild(contenedor)
+}
+
+}

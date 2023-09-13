@@ -78,7 +78,7 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
   background-color: #010113;
-  border-radius: 50px;
+  border-radius: 0%;
 }
 
 body::-webkit-scrollbar-thumb:hover {
@@ -711,9 +711,14 @@ ul li {
 }
 .contenedor_galeria .imagenesL .contenedor_img .btn {
   font-size: 17px;
+  font-weight: 800;
   color: rgb(0, 0, 0);
   background-color: rgb(138, 138, 34);
   text-decoration: none;
+  transition: all 0.6s ease-in-out;
+}
+.contenedor_galeria .imagenesL .contenedor_img .btn:active {
+  transform: scale(0, 1);
 }
 .contenedor_galeria .imagenesL .contenedor_img:hover {
   box-shadow: 5px 5px 20px black;
