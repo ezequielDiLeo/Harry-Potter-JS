@@ -1,0 +1,409 @@
+
+
+----------------------------------------------------------------
+
+
+
+
+        let compra1 = document.getElementById("button1")
+compra1.addEventListener("click", click1)
+
+function click1(){
+    console.log("agregaste este producto al carrito")
+}
+
+
+
+let button2 = document.getElementById("button2")
+button2.addEventListener("click", click2)
+
+function click2(){
+    console.log("agregaste este producto al carrito")
+}
+
+
+
+let button3 = document.getElementById("button3")
+button3.addEventListener("click", click3)
+
+function click3(){
+    console.log("agregaste este producto al carrito")
+}
+
+
+
+
+let button4 = document.getElementById("button4")
+button4.addEventListener("click", click4)
+
+function click4(){
+    console.log("agregaste este producto al carrito")
+}
+
+
+
+
+let button5 = document.getElementById("button5")
+button5.addEventListener("click", click5)
+
+function click5(){
+    console.log("agregaste este producto al carrito")
+}
+
+
+
+
+let button6 = document.getElementById("button6")
+button6.addEventListener("click", click6)
+
+function click6(){
+    console.log("agregaste este producto al carrito")
+}
+
+
+
+/* let contador7 = 0 */
+let button7 = document.getElementById("button7")
+button7.addEventListener("click", click7)
+
+function click7(){
+    console.log("agregaste este producto al carrito")
+
+    /* contador7 ++
+    console.log(`tuki ${contador7}`) */
+}
+
+let btnCart = document.getElementById("btnCart")
+btnCart.addEventListener("click", clickCart)
+function clickCart(){
+
+}
+
+
+
+---------------------------------------------------------------------
+class Carrito{
+
+    constructor (nombre, editorial, año, stock){
+
+        this._nombre = nombre;
+        this._editorial = editorial;
+        this._año = año;
+        this._stock = stock;
+        this._cantidad = 0;
+
+    }
+
+    agregar(){
+        this._cantidad += 1
+        console.log(this._cantidad)
+
+        return`agregaste ${this._nombre} al carrito`
+    }
+
+    devolver(){
+        this._cantidad = this._cantidad - 1
+        console.log(this._cantidad)
+
+        return `haz hecho la devolución de ${this._nombre} revise su mail para mas detalles`;
+    }
+
+    get stock(){
+        return this._stock
+    }
+    set stock(stockNuevo){
+        this._stock = stockNuevo
+    }
+
+
+}
+
+
+//creo el objeto
+const pelis = []
+
+let peli1 = new Carrito("Harry potter y la piedra filosofal", "Scholastic", 2000, 100);
+
+let peli2 = new Carrito("Harry Potter y la cámara secreta", "Scholastic", 2000, 100);
+
+let peli3 = new Carrito("Harry Potter y el prisionero de Azkaban", "Scholastic", 2000, 100);
+
+let peli4 = new Carrito("Harry Potter y el cáliz de fuego", "Scholastic", 2000, 100);
+
+let peli5 = new Carrito("Harry Potter y la Orden del Fénix", "Scholastic", 2000, 100);
+
+let peli6 = new Carrito("Harry Potter y el misterio del príncipe", "Scholastic", 2000, 100);
+
+let peli7 = new Carrito("Harry Potter y las reliquias de la Muerte", "Scholastic", 2000, 100);
+
+pelis.push(peli1, peli2, peli3, peli4, peli5, peli6, peli7)
+console.log(pelis.length)
+
+console.log(peli1.agregar())
+console.log(peli3.agregar())
+console.log(peli3.devolver())
+
+console.log(peli5.stock)
+
+for (const peli of pelis){
+    peli5.stock = peli5.stock - 1
+    console.log(peli5.stock)
+}
+
+
+
+
+
+
+
+
+
+//---------------------------------------------------------------------------//
+
+
+<!-- libros css --> 
+width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: $color1;
+    text-align: center;
+.imagenesL{
+    width: 100%;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 500px);
+    grid-gap: 40px;
+    .img{
+        border: 3px solid rgb(51, 50, 10);
+        background-position: center;
+        object-fit: cover;
+        width: 70%;
+        height: 300px;
+        margin-top: 15px;
+        transition: all 1s ease;
+    }
+    .img:hover{
+        transform: scale(1);
+    }
+    h2{
+        font-size: 15px;
+        color: rgb(255, 255, 255);
+        padding: 10px 20px 10px 20px;
+    }
+    .contenedor_img{
+        box-shadow: 5px 5px 20px rgba(67, 63, 8, 0.554);
+        background-color: rgb(7, 7, 7);
+        border-radius: 8px;
+        transition: all 1s ease;
+        .precio{
+            font-size: 12px;
+            color: #ffffff;
+            text-decoration: underline rgb(138, 138, 34);
+        }
+        .btn{
+            font-size: 17px;
+            font-weight: 800;
+            color: rgb(0, 0, 0);
+            background-color: rgb(138, 138, 34);
+            text-decoration: none;
+        }
+    }
+    .contenedor_img:hover{
+    box-shadow: 5px 5px 20px $color1;
+    transform: translateY(-1%);
+    }
+
+    .img1{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    
+    .img2{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    
+    .img3{
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+    
+    .img4{
+        grid-column: 4/5;
+        grid-row: 1/2;
+    }
+    .img5{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .img6{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .img7{
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+}
+}
+
+@media screen and (max-width: 1024px) {
+.contenedor_galeria{
+    .imagenesL{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 500px);
+
+        .img1{
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        
+        .img2{
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+        
+        .img3{
+            grid-column: 3/4;
+            grid-row: 1/2;
+        }
+        
+        .img4{
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        .img5{
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+        .img6{
+            grid-column: 3/4;
+            grid-row: 2/3;
+        }
+        .img7{
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+    }
+}
+}
+
+@media screen and (max-width: 900px) {
+.contenedor_galeria{
+    .imagenesL{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 500px);
+        .img{
+            width: 250px;
+        }
+
+        .img1{
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        
+        .img2{
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+        
+        .img3{
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        
+        .img4{
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+        .img5{
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+        .img6{
+            grid-column: 2/3;
+            grid-row: 3/4;
+        }
+        .img7{
+            grid-column: 1/2;
+            grid-row: 4/5;
+        }
+    }
+}
+}
+
+@media screen and (max-width: 480px) {
+.contenedor_galeria{
+    .imagenesL{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(7, 500px);
+        .img{
+            width: 200px;
+        }
+
+        .img1{
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        
+        .img2{
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        
+        .img3{
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+        
+        .img4{
+            grid-column: 1/2;
+            grid-row: 4/5;
+        }
+        .img5{
+            grid-column: 1/2;
+            grid-row: 5/6;
+        }
+        .img6{
+            grid-column: 1/2;
+            grid-row: 6/7;
+        }
+        .img7{
+            grid-column: 1/2;
+            grid-row: 7/8;
+        }
+    }
+}
+}
+
+/* media parte fondo */
+@media screen and (max-width: 900px){
+.infoLibros{
+    background-color: $color1;
+    .fondoLibros{
+        .bookInfo{
+            font-size: 20px;
+        }
+        .textoLibros{
+            font-size: 10px;
+        }
+    }
+}
+}
+@media screen and (max-width: 330px){
+.infoLibros{
+    background-color: #000000;
+    .fondoLibros{
+        .bookInfo{
+            font-size: 15px;
+        }
+        .textoLibros{
+            font-size: 10px;
+            margin-bottom: 50px;
+        }
+    }
+}
+}

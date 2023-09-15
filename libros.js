@@ -1,88 +1,61 @@
 
-class Carrito{
-
-    constructor (nombre, editorial, año, stock){
-
-        this._nombre = nombre;
-        this._editorial = editorial;
-        this._año = año;
-        this._stock = stock;
-        this._cantidad = 0;
-
-    }
-
-    agregar(){
-        this._cantidad += 1
-        console.log(this._cantidad)
-
-        return`agregaste ${this._nombre} al carrito`
-    }
-
-    devolver(){
-        this._cantidad = this._cantidad - 1
-        console.log(this._cantidad)
-
-        return `haz hecho la devolución de ${this._nombre} revise su mail para mas detalles`;
-    }
-
-    get stock(){
-        return this._stock
-    }
-    set stock(stockNuevo){
-        this._stock = stockNuevo
-    }
-
-
-}
-
-
-//creo el objeto
-const pelis = []
-
-let peli1 = new Carrito("Harry potter y la piedra filosofal", "Scholastic", 2000, 100);
-
-let peli2 = new Carrito("Harry Potter y la cámara secreta", "Scholastic", 2000, 100);
-
-let peli3 = new Carrito("Harry Potter y el prisionero de Azkaban", "Scholastic", 2000, 100);
-
-let peli4 = new Carrito("Harry Potter y el cáliz de fuego", "Scholastic", 2000, 100);
-
-let peli5 = new Carrito("Harry Potter y la Orden del Fénix", "Scholastic", 2000, 100);
-
-let peli6 = new Carrito("Harry Potter y el misterio del príncipe", "Scholastic", 2000, 100);
-
-let peli7 = new Carrito("Harry Potter y las reliquias de la Muerte", "Scholastic", 2000, 100);
-
-pelis.push(peli1, peli2, peli3, peli4, peli5, peli6, peli7)
-console.log(pelis.length)
-
-console.log(peli1.agregar())
-console.log(peli3.agregar())
-console.log(peli3.devolver())
-
-console.log(peli5.stock)
-
-for (const peli of pelis){
-    peli5.stock = peli5.stock - 1
-    console.log(peli5.stock)
-}
-
 //array con objeto
+const contenedorGaleria = document.getElementById("contenedor_galeria");
+const btnCart = document.getElementById("btnCart")
+
 const books = [
-    {id: 1, nombre:"Harry potter y la piedra filosofal", precio:2000},
-    {id: 2, nombre:"Harry Potter y la cámara secreta", precio:1900},
-    {id: 3, nombre:"Harry Potter y el prisionero de Azkaban", precio:2100},
-    {id: 4, nombre:"Harry Potter y el cáliz de fuego", precio:2300},
-    {id: 5, nombre:"Harry Potter y la Orden del Fénix", precio:2200},
-    {id: 6, nombre:"Harry Potter y el misterio del príncipe", precio:2150},
-    {id: 7, nombre:"Harry Potter y las reliquias de la Muerte", precio:2500}
+    {id: 1, nombre:"Harry potter y la piedra filosofal", precio:2000, img: "../assets/images/harry-potter.jpg",},
+
+    {id: 2, nombre:"Harry Potter y la cámara secreta", precio:1900, img: "../assets/images/harry-potter2.jpg",},
+
+    {id: 3, nombre:"Harry Potter y el prisionero de Azkaban", precio:2100, img:"../assets/images/harry-potter3.jpg"},
+
+    {id: 4, nombre:"Harry Potter y el cáliz de fuego", precio:2300, img:"../assets/images/harry-potter4.jpg"},
+
+    {id: 5, nombre:"Harry Potter y la Orden del Fénix", precio:2200, img:"../assets/images/harry-potter5.jpg"},
+
+    {id: 6, nombre:"Harry Potter y el misterio del príncipe", precio:2150, img:"../assets/images/harry-potter6.jpg"},
+
+    {id: 7, nombre:"Harry Potter y las reliquias de la Muerte", precio:2500, img:"../assets/images/harry-potter7-2.jpg"}
 ]
 
-for (const book of books){
-    console.log(book.id)
-    console.log(book.nombre)
-    console.log(book.precio)
-}
+let carrito = []
+
+books.forEach((book)=> {
+    let content = document.createElement("div");
+    content.className = "card"
+    content.innerHTML = `
+        <img src="${book.img}">
+        <h3 class="txt">${book.nombre}</h3>
+        <p class="precio">$${book.precio}</p>
+    `
+
+    contenedorGaleria.append(content);
+
+    let boton = document.createElement("button");
+    boton.className = "btn"
+    boton.innerText = "comprar";
+
+    content.append(boton)
+
+    boton.addEventListener("click", () => {
+        carrito.push({
+            id : book.id,
+            img : book.img,
+            nombre : book.nombre,
+            precio : book.precio,
+        });
+        console.log(carrito);
+    });
+});
+
+btnCart.addEventListener("click", () =>{
+    console.log("funciona");
+})
+
+
+
+// ------------------------------------------------------------------- ->
 
 const totalLibros = books.reduce((acumulador, el) => acumulador + el.precio, 0)
 
@@ -137,75 +110,9 @@ carritoConAlgo(false)
 
     */
 
-/* let div = document.getElementsByClassName("contenedor_img")[0];
-console.log(div.innerText) */
 
 let Libro = document.querySelector(".Libro")
 Libro.innerHTML = "Libros Harry Potter"
 
 
 
-let compra1 = document.getElementById("button1")
-compra1.addEventListener("click", click1)
-
-function click1(){
-    console.log("agregaste este producto al carrito")
-}
-
-
-
-let button2 = document.getElementById("button2")
-button2.addEventListener("click", click2)
-
-function click2(){
-    console.log("agregaste este producto al carrito")
-}
-
-
-
-let button3 = document.getElementById("button3")
-button3.addEventListener("click", click3)
-
-function click3(){
-    console.log("agregaste este producto al carrito")
-}
-
-
-
-
-let button4 = document.getElementById("button4")
-button4.addEventListener("click", click4)
-
-function click4(){
-    console.log("agregaste este producto al carrito")
-}
-
-
-
-
-let button5 = document.getElementById("button5")
-button5.addEventListener("click", click5)
-
-function click5(){
-    console.log("agregaste este producto al carrito")
-}
-
-
-
-
-let button6 = document.getElementById("button6")
-button6.addEventListener("click", click6)
-
-function click6(){
-    console.log("agregaste este producto al carrito")
-}
-
-
-
-
-let button7 = document.getElementById("button7")
-button7.addEventListener("click", click7)
-
-function click7(){
-    console.log("agregaste este producto al carrito")
-}

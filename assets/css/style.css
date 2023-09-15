@@ -430,7 +430,8 @@ ul li {
 .contenedor_A .contenedor_B {
   width: 50%;
   height: 400px;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
   color: rgb(211, 208, 208);
   margin: 0 50px 0 50px;
   padding: 20px 10px 20px 10px;
@@ -668,223 +669,58 @@ ul li {
 
 /*parte libros*/
 .contenedor_galeria {
-  width: 100%;
   height: auto;
-  padding: 20px;
-  margin: 0 auto;
-  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding: 180px;
+  background-color: #000000;
+}
+.contenedor_galeria .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 250px;
+  margin: auto;
+  background-color: #000;
   text-align: center;
+  font-family: arial;
+  margin-bottom: 20px;
+  border: 1px solid rgb(51, 50, 10);
+  border-radius: 5px;
 }
-.contenedor_galeria .imagenesL {
-  width: 100%;
-  height: auto;
-  background-color: rgb(0, 0, 0);
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 500px);
-  grid-gap: 40px;
+.contenedor_galeria .card img {
+  padding-left: 30px;
+  width: 90%;
+  height: 250px;
 }
-.contenedor_galeria .imagenesL .img {
-  border: 3px solid rgb(51, 50, 10);
-  background-position: center;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 70%;
-  height: 300px;
-  margin-top: 15px;
-}
-.contenedor_galeria .imagenesL h2 {
+.contenedor_galeria .card .txt {
+  text-align: center;
+  color: white;
   font-size: 15px;
-  color: rgb(255, 255, 255);
-  padding: 10px 20px 10px 20px;
+  padding: 10px;
 }
-.contenedor_galeria .imagenesL .contenedor_img {
-  box-shadow: 5px 5px 20px rgba(67, 63, 8, 0.554);
-  background-color: rgb(7, 7, 7);
-  border-radius: 8px;
-}
-.contenedor_galeria .imagenesL .contenedor_img .precio {
-  font-size: 12px;
+.contenedor_galeria .card .precio {
   color: #ffffff;
-  -webkit-text-decoration: underline rgb(138, 138, 34);
-          text-decoration: underline rgb(138, 138, 34);
+  font-size: 15px;
 }
-.contenedor_galeria .imagenesL .contenedor_img .btn {
-  font-size: 17px;
-  font-weight: 800;
-  color: rgb(0, 0, 0);
-  background-color: rgb(138, 138, 34);
-  text-decoration: none;
-  transition: all 0.6s ease-in-out;
+.contenedor_galeria .card .btn {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: #e4e4db;
+  background-color: #9d8531;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
 }
-.contenedor_galeria .imagenesL .contenedor_img .btn:active {
-  transform: scale(0, 1);
-}
-.contenedor_galeria .imagenesL .contenedor_img:hover {
-  box-shadow: 5px 5px 20px black;
-  transform: translateY(-2%);
-}
-.contenedor_galeria .imagenesL .img1 {
-  grid-column: 1/2;
-  grid-row: 1/2;
-}
-.contenedor_galeria .imagenesL .img2 {
-  grid-column: 2/3;
-  grid-row: 1/2;
-}
-.contenedor_galeria .imagenesL .img3 {
-  grid-column: 3/4;
-  grid-row: 1/2;
-}
-.contenedor_galeria .imagenesL .img4 {
-  grid-column: 4/5;
-  grid-row: 1/2;
-}
-.contenedor_galeria .imagenesL .img5 {
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-.contenedor_galeria .imagenesL .img6 {
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-.contenedor_galeria .imagenesL .img7 {
-  grid-column: 3/4;
-  grid-row: 2/3;
+.contenedor_galeria .card .btn:hover {
+  opacity: 0.7;
 }
 
-@media screen and (max-width: 1024px) {
-  .contenedor_galeria .imagenesL {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 500px);
-  }
-  .contenedor_galeria .imagenesL .img1 {
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-  .contenedor_galeria .imagenesL .img2 {
-    grid-column: 2/3;
-    grid-row: 1/2;
-  }
-  .contenedor_galeria .imagenesL .img3 {
-    grid-column: 3/4;
-    grid-row: 1/2;
-  }
-  .contenedor_galeria .imagenesL .img4 {
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-  .contenedor_galeria .imagenesL .img5 {
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
-  .contenedor_galeria .imagenesL .img6 {
-    grid-column: 3/4;
-    grid-row: 2/3;
-  }
-  .contenedor_galeria .imagenesL .img7 {
-    grid-column: 1/2;
-    grid-row: 3/4;
-  }
-}
-@media screen and (max-width: 900px) {
-  .contenedor_galeria .imagenesL {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 500px);
-  }
-  .contenedor_galeria .imagenesL .img {
-    width: 250px;
-  }
-  .contenedor_galeria .imagenesL .img1 {
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-  .contenedor_galeria .imagenesL .img2 {
-    grid-column: 2/3;
-    grid-row: 1/2;
-  }
-  .contenedor_galeria .imagenesL .img3 {
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-  .contenedor_galeria .imagenesL .img4 {
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
-  .contenedor_galeria .imagenesL .img5 {
-    grid-column: 1/2;
-    grid-row: 3/4;
-  }
-  .contenedor_galeria .imagenesL .img6 {
-    grid-column: 2/3;
-    grid-row: 3/4;
-  }
-  .contenedor_galeria .imagenesL .img7 {
-    grid-column: 1/2;
-    grid-row: 4/5;
-  }
-}
-@media screen and (max-width: 480px) {
-  .contenedor_galeria .imagenesL {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(7, 500px);
-  }
-  .contenedor_galeria .imagenesL .img {
-    width: 200px;
-  }
-  .contenedor_galeria .imagenesL .img1 {
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-  .contenedor_galeria .imagenesL .img2 {
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-  .contenedor_galeria .imagenesL .img3 {
-    grid-column: 1/2;
-    grid-row: 3/4;
-  }
-  .contenedor_galeria .imagenesL .img4 {
-    grid-column: 1/2;
-    grid-row: 4/5;
-  }
-  .contenedor_galeria .imagenesL .img5 {
-    grid-column: 1/2;
-    grid-row: 5/6;
-  }
-  .contenedor_galeria .imagenesL .img6 {
-    grid-column: 1/2;
-    grid-row: 6/7;
-  }
-  .contenedor_galeria .imagenesL .img7 {
-    grid-column: 1/2;
-    grid-row: 7/8;
-  }
-}
-/* media parte fondo */
-@media screen and (max-width: 900px) {
-  .infoLibros {
-    background-color: black;
-  }
-  .infoLibros .fondoLibros .bookInfo {
-    font-size: 20px;
-  }
-  .infoLibros .fondoLibros .textoLibros {
-    font-size: 10px;
-  }
-}
-@media screen and (max-width: 330px) {
-  .infoLibros {
-    background-color: #000000;
-  }
-  .infoLibros .fondoLibros .bookInfo {
-    font-size: 15px;
-  }
-  .infoLibros .fondoLibros .textoLibros {
-    font-size: 10px;
-    margin-bottom: 50px;
-  }
-}
 /*css plataforma 9 3/4*/
 .infoPlataforma {
   width: 100%;
