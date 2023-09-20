@@ -137,6 +137,7 @@ header{
     nav{
         text-decoration: none;
         list-style: none;
+        cursor: grab;
         .navbar{
             display: flex;
             justify-content: space-between;
@@ -201,6 +202,25 @@ ul li{
         }
     }
 }
+
+/* menor de edad */
+.contenedorMenor{
+    width: 100%;
+    height: 100vh;
+    background-color: #382c2c;
+    color: #717c12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .menor{
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
 
 /*info casas HP*/
 
@@ -693,6 +713,10 @@ ul li{
 
 /*css libros*/
 
+.nav-item{
+    cursor: pointer;
+}
+
 .tituloLibro{
     width: 100%;
     height: 70px;
@@ -745,6 +769,20 @@ ul li{
     }
 }
 
+.tituloLibro{
+    .libro{
+        font-size: auto;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .tituloLibro{
+        .libro{
+            font-size: 50px;
+        }
+    }
+}
+
 /*parte libros*/
 .contenedor_galeria{
     height: auto;
@@ -760,6 +798,7 @@ ul li{
     .card{
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         width: 250px;
+        max-height: 400px;
         margin: auto;
         background-color: #000;
         text-align: center;
@@ -771,6 +810,8 @@ ul li{
             padding-left: 30px;
             width: 90%;
             height: 250px;
+            border-radius: 5px;
+            margin-top: 10px;
         }
         .txt{
             text-align: center;
@@ -800,6 +841,98 @@ ul li{
     
 }
 
+@media only screen and (max-width: 855px){
+    .contenedor_galeria{
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding-top: 30px;
+        padding-left: 80px;
+        padding-right: 80px;
+        background-color: #000000;
+    }
+}
+
+
+
+/*modal content*/
+.Modal-container{
+    width: 30%;
+    margin: 0 69%;
+    max-height: 450px;
+    color: #000000;
+    background-color: #b8b6c4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*top*/
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 130px;
+    scrollbar-color: none;
+    border-radius: 10px;
+    .modal-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #0f0f0f;
+        color: #e9dddd;
+        width: 100%;
+        padding: 10px;
+        border-bottom: 0px;
+        .modal-header-title{
+            justify-self: start;
+            font-size: 25px;
+            margin: 0;
+            color: #9d8531;
+            padding-left: 25px;
+        }
+    }
+    .modal-header-button{
+        cursor: pointer;
+        width: 5%;
+        display: flex;
+        justify-content: center;
+        align-self:center;
+        font-size: 13px;
+        margin: 0;
+        border: none;
+    }
+    .modal-header-button:hover{
+        /* opacity: 0.7; */
+        background-color: #413f3f;
+        border-radius: 50%;
+    }
+    .carrito-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 70%;
+        margin: 10px;
+        .img-cart{
+            height: 120px;
+            width: 120px;
+            padding: 10px;
+        }
+        .h3-cart{
+            font-size: 15px;
+            padding: 5px;
+        }
+        .precio-cart{
+            border: solid 1px rgba(67, 68, 15, 0.071);
+        }
+    }
+    .total-content{
+        font-size: 20px;
+        padding: 15px;
+        text-align: center;
+        padding-top: 15px;
+    }
+}
 
 /*css plataforma 9 3/4*/
 

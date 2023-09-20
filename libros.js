@@ -1,7 +1,11 @@
 
 //array con objeto
 const contenedorGaleria = document.getElementById("contenedor_galeria");
+
 const btnCart = document.getElementById("btnCart")
+
+const modalContainer = document.getElementById("Modal-container");
+
 
 const books = [
     {id: 1, nombre:"Harry potter y la piedra filosofal", precio:2000, img: "../assets/images/harry-potter.jpg",},
@@ -50,16 +54,47 @@ books.forEach((book)=> {
 });
 
 btnCart.addEventListener("click", () =>{
-    console.log("funciona");
-})
+    modalContainer.innerHTML = "";
+    modalContainer.style.display = "flex";
+    const modalHeader = document.createElement("div");
+    modalHeader.className = "modal-header";
+    modalHeader.innerHTML = `
+    <h1 class="modal-header-title">Carrito.</h1>
+    `;
+    modalContainer.append(modalHeader);
+
+    const modalButton = document.createElement("h1");
+    modalButton.innerText = "x"
+    modalButton.className = "modal-header-button";
+
+    modalButton.addEventListener("click", () => {
+        modalContainer.style.display = "none";
+    });
+
+    modalHeader.append(modalButton);
+
+    carrito.forEach((book) => {
+        let carritoContent = document.createElement("div");
+        carritoContent.className = "carrito-content"
+        carritoContent.innerHTML = `
+        <img src="${book.img}" class="img-cart">
+        <h3 class="h3-cart">${book.nombre}</h3>
+        <p class="precio-cart">$${book.precio}</p>
+        `;
+        modalContainer.append(carritoContent);
+    })
+
+    const total = carrito.reduce((acc, el) => acc + el.precio, 0);
+    
+    const totalCompra = document.createElement("div");
+    totalCompra.className = "total-content"
+    totalCompra.innerHTML = `total a pagar: $${total}`;
+    modalContainer.append(totalCompra);
+});
 
 
 
 // ------------------------------------------------------------------- ->
-
-const totalLibros = books.reduce((acumulador, el) => acumulador + el.precio, 0)
-
-console.log(totalLibros)
 
 const precio = books.filter((el)=> el.precio > 2000)
 console.log(precio)

@@ -1,5 +1,15 @@
 
+const modal = document.createElement("body");
+            modal.style.backgroundColor = "black"
+            modal.className = ("Afuera");
+            modal.innerHTML = `
+            <h1 class="Arafue" > No puedes ingresar, eres en un muggle. </h1>
+            <p class="Srry"> solo magos </p>
+            `
+            Body.append(modal);
 
+
+            
 ----------------------------------------------------------------
 
 

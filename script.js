@@ -1,4 +1,3 @@
-
 function muggle(nombre){
 
     let magos = prompt(`hola, ${nombre} , escribe "mago" si eres mago o "muggle" si eres muggle`);
@@ -8,10 +7,12 @@ function muggle(nombre){
         console.log("eres mago :p ")
     }else{
         alert("NO puedes ingresar, solo para magos")
+        window.location.href = "./pages/pageRed.html"
     }
 
 }
-muggle(prompt("escribe tu nombre"))
+
+muggle(prompt("escribe tu nombre"));
 
 setTimeout(()=>{
     console.log("muy bien")
